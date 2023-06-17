@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 streamlit = "*"
 pandas = "*"
+multiapp = "*"
+openai = "*"
 
 [dev-packages]
 
