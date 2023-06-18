@@ -181,7 +181,7 @@ def app():
             if uploaded_file != None:
                 ##st.image(uploaded_file)
                 col1, col2 = st.columns([1, 3])
-                client = hume.HumeBatchClient("cXDsxkdJ2R4Dezmbisu8vrUo2c8BmWEzGWecXP30tRIukDls")
+                client = hume.HumeBatchClient("")
                 urls = ["https://media.istockphoto.com/id/1200561508/photo/tired-young-woman-fall-asleep-working-at-laptop.jpg?s=1024x1024&w=is&k=20&c=GwdF1IdZb93rrBb6cU8g2Jlm-uaXCDmFbFywg0-cwCo="]
                 config = hume.models.config.FaceConfig()
                 job = client.submit_job(urls, [config])
