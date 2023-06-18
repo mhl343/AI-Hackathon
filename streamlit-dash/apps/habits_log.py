@@ -4,7 +4,7 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 
 def app():
-    habits_data = pd.read_csv("habits-data.csv")
+    habits_data = pd.read_csv("data/habits-data.csv")
     st.header("today's habits:")
     today = habits_data.iloc[-1].tolist()
     filtered = [list(habits_data)[i] for i in range(len(list(habits_data))) if today[i]][1:]

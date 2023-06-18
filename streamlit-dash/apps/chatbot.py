@@ -10,8 +10,7 @@ def app():
         data = json.load(json_file)
 
     def format_prompt():
-        user_prompt = f"""User's journal entry on day {data["date"]}: {data["entry"]}
-                        """
+        user_prompt = f"User's journal entry on day {data['date']}: {data['entry']}"
         return user_prompt
         
     messages = [
@@ -23,6 +22,7 @@ def app():
         # Add user input to messages/dialogue history
         messages.append({'role': 'user', 'content': question})
 
+        st.write(messages)
         # Generate response using OpenAI API
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
