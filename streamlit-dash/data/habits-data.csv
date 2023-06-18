@@ -1,0 +1,18 @@
+date,eat 3 meals,exercise,plan out day,swim
+2023-06-01,True,True,True,False
+2023-06-02,False,False,False,False
+2023-06-03,True,False,False,False
+2023-06-04,False,False,False,False
+2023-06-05,True,True,True,False
+2023-06-06,True,False,False,False
+2023-06-07,True,True,True,False
+2023-06-08,False,False,False,False
+2023-06-09,True,True,True,False
+2023-06-10,False,True,True,False
+2023-06-11,True,True,True,False
+2023-06-12,False,False,False,False
+2023-06-13,False,True,True,False
+2023-06-14,False,False,False,False
+2023-06-15,True,False,False,False
+2023-06-16,True,False,False,False
+2023-06-17,True,False,False,True

@@ -7,29 +7,33 @@ div#root {
 }
 
 div.stApp {
-  background-color: lavender;
+  background-color: rgb(255, 255, 255);
 }
 
 div.stButton button {
-  background-color: hotpink;
-  color: white;
+  background-color: #d2d9e2;
+  color: rgb(98, 75, 100);
 }
 
 div.stTextInput input {
-  background-color: rgb(170, 202, 247);
-  color: black;
-  font-family: 'Bradley Hand'; /* Customize the font family */
+  background-color: #d2d9e2;
+  border-color: rgb(98, 75, 100);
+  color: rgb(98, 75, 100);
+  font-family: 'Bradley Hand'; 
 }
 
 div.stTextArea textarea {
-  background-color: rgb(170, 202, 247);
-  color: black;
-  font-family: 'Bradley Hand'; /* Customize the font family */
+  background-color: #d2d9e2;
+  border-color: rgb(98, 75, 100);
+  color: rgb(98, 75, 100);
+  font-family: 'Bradley Hand'; 
 }
 
-div.stText text {
-  color: black;
-  font-family: 'Bradley Hand'; /* Customize the font family */
+div.stRadio radio {
+  background-color: #d2d9e2;
+  border-color: rgb(98, 75, 100);
+  color: rgb(98, 75, 100);
+  font-family: 'Bradley Hand'; 
 }
 
 .stMarkdown h1 {
@@ -39,24 +43,31 @@ div.stText text {
   color: rgb(98, 75, 100);
 }
 
-.stMarkdown h2, .stMarkdown h3, .stMarkdown h4 {
+.stMarkdown h2, .stMarkdown h3 {
   font-family: 'Big Caslon', serif;
   display: flex;
   justify-content: center;
   color: rgb(98, 75, 100);
 }
+
+.stMarkdown h4 {
+  font-family: 'Big Caslon', serif;
+  display: flex;
+  justify-content: center;
+  color: rgb(92, 141, 227);
+}
+
 
 .stMarkdown h5, .stMarkdown h6 {
   font-family: 'Big Caslon', serif;
   display: flex;
   justify-content: center;
-  color: rgb(98, 75, 100);
+  color: rgb(0, 0, 0);
 }
-
 
 code {
   color: rgb(74, 74, 74);
-  background-color: rgb(153, 68, 178);
+  background-color: rgb(198, 165, 209);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -71,16 +82,21 @@ div[role="listbox"] ul:hover {
 }
 
 label[data-baseweb="radio"] {
+    color: hotpink;
     height: 100%;
     padding: 0.1vh 0;
 }
 
 label[data-baseweb="radio"] div {
   font-size: 24px;
-  color: rgb(209, 188, 233);
+  color: rgb(98, 75, 100);
   margin-left: 2vh;
-  font-family: Optima, sans-serif;
+  font-family: 'Big Caslon';
 }
+
+
+
+
 
 
 

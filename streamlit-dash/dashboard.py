@@ -1,7 +1,6 @@
-import pandas as pd 
 import streamlit as st 
 from multiapp import MultiApp
-from apps import habits, home, chatbot, song
+from apps import habits, home, chatbot, song, habits_log
 
 def local_css():
     with open("style.css") as f:
@@ -10,9 +9,10 @@ def local_css():
 local_css()
 
 app = MultiApp()
-app.add_app("Homepage", home.app)
-app.add_app("Habits", habits.app)
-app.add_app("Chatbot", chatbot.app)
-app.add_app("Song", song.app)
+app.add_app("homepage", home.app)
+app.add_app("dashboard", habits.app)
+app.add_app("habits log", habits_log.app)
+app.add_app("chat with a friend!", chatbot.app)
+
 
 app.run()

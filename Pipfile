@@ -9,6 +9,9 @@ pandas = "*"
 multiapp = "*"
 openai = "*"
 hume = "*"
+nltk = "*"
+streamlit-lottie = "*"
+plotly = "*"
 
 [dev-packages]
 
