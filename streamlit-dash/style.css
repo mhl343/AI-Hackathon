@@ -32,10 +32,26 @@ div.stText text {
   font-family: 'Bradley Hand'; /* Customize the font family */
 }
 
-.stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4, .stMarkdown h5, .stMarkdown h6 {
-  font-family: 'Bradley Hand', cursive;
+.stMarkdown h1 {
+  font-family: 'Big Caslon', serif;
+  display: flex;
+  justify-content: center;
+  color: rgb(98, 75, 100);
 }
 
+.stMarkdown h2, .stMarkdown h3, .stMarkdown h4 {
+  font-family: 'Big Caslon', serif;
+  display: flex;
+  justify-content: center;
+  color: rgb(98, 75, 100);
+}
+
+.stMarkdown h5, .stMarkdown h6 {
+  font-family: 'Big Caslon', serif;
+  display: flex;
+  justify-content: center;
+  color: rgb(98, 75, 100);
+}
 
 
 code {

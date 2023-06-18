@@ -36,14 +36,116 @@ def app():
         col = (col + 1) % 4
         counter += 1
 
-    #--------------journaling----------------
+#--------------journaling----------------
     st.header("journaling...")
-    st.write(f"Date: {date.today()}")
-    entry = st.text_area("Today's Journal Entry", height=300)
-    full = {
+
+    col1, col2 = st.columns([3, 1])
+    
+    with col2:
+        type = st.radio("how would you like to document today's journal entry?",
+                        ('text box', 'video', 'voice memo', 'image'))
+    
+    with col1:
+        st.write(f"Date: {date.today()}")
+        if type == 'text box':
+            entry = st.text_area("today's journal entry", height=300)
+            full = {
                 "date": str(date.today()),
                 "entry": entry
             }
+            with open("sample.json", "w") as outfile:
+                json.dump(full, outfile)
+
+        elif type == 'video':
+            st.write("upload video")
+        elif type == 'voice memo':
+            st.write("upload voice memo")
+        elif type == 'image':
+            st.write("upload image")
+
+#--------------calender----------------
+
+#run "pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib"
+
+
+#from future import print_function
+# import streamlit as st
+# import pandas as pd
+# import numpy as np
+# import datetime
+# import os.path
+
+# from google.auth.transport.requests import Request
+# from google.oauth2.credentials import Credentials
+# from google_auth_oauthlib.flow import InstalledAppFlow
+# from googleapiclient.discovery import buildq
+# from googleapiclient.errors import HttpError
+
+# If modifying these scopes, delete the file token.json.
+    SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
+
+    st.title("Calendar")
+    html_string = "<iframe src= 'https://calendar.google.com/calendar/embed?src=joon33103%40gmail.com&ctz=America%2FLos_Angeles' style='border: 0' width='800' height='600' frameborder='0' scrolling='no'></iframe>"
+    st.markdown(html_string, unsafe_allow_html=True)
+#     events = []
+#     creds = None
+#     st.header("Calendar")
+#     st.markdown("This is the calendar page")
+#     def authenticate():
+#         creds = None
+#         if creds and creds.expired and creds.refresh_token:
+#             creds.refresh(Request())
+#         else:
+#             flow = InstalledAppFlow.from_client_secrets_file(
+#                 'credentials.json', SCOPES)
+#             creds = flow.run_local_server(port=0)
+#         # Save the credentials for the next run
+#         with open('token.json', 'w') as token:
+#             token.write(creds.to_json())
+
+#     def extract_events():
+#         try:
+#             service = build('calendar', 'v3', credentials=creds)
+
+#             # Call the Calendar API
+#             now = datetime.datetime.utcnow().isoformat() + 'Z'  # 'Z' indicates UTC time
+#             print('Getting the upcoming 10 events')
+#             events_result = service.events().list(calendarId='primary', timeMin=now,
+#                                                 maxResults=10, singleEvents=True,
+#                                                 orderBy='startTime').execute()
+#             events = events_result.get('items', [])
+
+#             if not events:
+#                 print('No upcoming events found.')
+#                 return
+
+#             # Prints the start and name of the next 10 events
+#             complete_events = []
+#             for event in events:
+#                 start = event['start'].get('dateTime', event['start'].get('date'))
+#                 descriptive = start + event['summary'] + event["description"]
+#                 complete_events.append(descriptive)
+#                 # print(start, event['summary'], event["description"])
+#                 print(descriptive)
+#             return complete_events
+
+#         except HttpError as error:
+#             print('An error occurred: %s' % error)
+        
+
+
+# # The file token.json stores the user's access and refresh tokens, and is
+#     # created automatically when the authorization flow completes for the first
+#     # time.
+#     if os.path.exists('token.json'):
+#         creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+#         events = extract_events()
+   
+#     # If there are no (valid) credentials available, let the user log in.
+#     if not creds or not creds.valid:
+#         if st.button("Click here to allow access to google calendar"):
+#             authenticate()
+#             events = extract_events()
+        
     
-    with open("sample.json", "w") as outfile:
-        json.dump(full, outfile)
+#     st.markdown(events)

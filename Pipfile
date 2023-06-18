@@ -8,6 +8,7 @@ streamlit = "*"
 pandas = "*"
 multiapp = "*"
 openai = "*"
+hume = "*"
 
 [dev-packages]
 

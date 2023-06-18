@@ -8,7 +8,7 @@ import json
 
 def app():
     st.header("Hello! \U0001F44B I'm Fiona.")
-    openai.api_key = ""
+    openai.api_key = "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"
 
     with open('sample.json') as json_file:
         data = json.load(json_file)
