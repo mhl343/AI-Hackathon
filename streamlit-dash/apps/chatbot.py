@@ -4,7 +4,7 @@ import json
 
 def app():
     st.header("\"Hello! \U0001F44B I'm Fiona.\"")
-    openai.api_key = ""
+    openai.api_key = "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"
 
     with open('sample.json') as json_file:
         data = json.load(json_file)
@@ -22,7 +22,6 @@ def app():
         # Add user input to messages/dialogue history
         messages.append({'role': 'user', 'content': question})
 
-        st.write(messages)
         # Generate response using OpenAI API
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",

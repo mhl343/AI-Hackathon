@@ -19,7 +19,7 @@ def app():
         st.write(" ")
         st.write(" ")
         st.title("welcome to...") 
-        st.title("mindfulday \U0001F430")
+        st.title("dailyfi \U0001F430")
     with col2:
         st_lottie(
             lottie_home,
